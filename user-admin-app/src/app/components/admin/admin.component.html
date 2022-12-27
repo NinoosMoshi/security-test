@@ -1,0 +1,43 @@
+<h3>Admin Dashboard</h3>
+
+<div class="container">
+  <div class="row">
+
+    <button type="button" class="btn btn-primary" (click)="showAdminAdd()">
+      <i class="fa fa-plus"></i>
+      New Employee
+    </button>
+
+     <table class="table table-hover">
+        <thead class="table table-borderless">
+           <tr class="text-center">
+             <th>Image</th>
+             <th>Name</th>
+             <th>Price</th>
+             <th>Action</th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr class="text-center" *ngFor="let temp of products">
+            <td>
+              <img height="40" width="40" src="" class="rounded-circle img-fluid img-thumbnail" alt=""/>
+            </td>
+            <td>{{temp.name}}</td>
+            <td>{{temp.price}}</td>
+            <td class="">
+              <div class="btn-group">
+                <button  class="btn btn-outline-info"  ><i class="fas fa-edit"></i></button>
+                <button  class="btn btn-outline-danger"  ><i class="fas fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+     </table>
+  </div>
+</div>
+
+
+
+<app-admin-add (save)="receivedFromSave($event)"></app-admin-add>
+
+

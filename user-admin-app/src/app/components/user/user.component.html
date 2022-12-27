@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>List Of Product</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let temp of products">
+        <td>{{temp.name}}</td>
+        <td>{{temp.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
